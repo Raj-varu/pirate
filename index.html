@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-      <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-  </head>
-  <body>
-   <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-    poster="MY_VIDEO_POSTER.jpg"
-    data-setup="{}"
-  >
-    <source src="https://ewal.v421c6e485f.site/_v2-wwdo/12a3c523fc105800ed8c394685aeeb0bc52efd5c5eb0f8f500407baea93ece832257df1a4b6125fcfa38c35da05dee86aad28d46d73fc4e9d4e5a63d5435a3876fc014a45a0db85f4dc2f1ab6b4622007764d83c570530969c9de809c2a57c863b48e31c/h/list;15a38634f803584ba8926411d7bee906856cab0654b5bc.m3u8" type="application/x-mpegURL" />
-  
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HLS Video Player</title>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Video.js Player -->
+  <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264">
+    <source src="https://ewal.v421c6e485f.site/_v2-wwdo/12a3c523fc105800ed8c394685aeeb0bc52efd5c5eb0f8f500407baea93ece832257df1a4b6125fcfa38c35da05dee86aad28d46d73fc4e9d4e5a63d5435a3876fc014a45a0db85f4dc2f1ab6b4622007764d83c570530969c9de809c2a57c863b48e31c/h/list;15a38634f803584ba8926411d7bee906856cab0654b5bc.m3u8" type="application/x-mpegURL">
   </video>
-      <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-  </body>
+
+  <!-- Include Video.js library -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <!-- Include Video.js HLS plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
+
+  <script>
+    var player = videojs('videoPlayer');
+  </script>
+
+</body>
 </html>
